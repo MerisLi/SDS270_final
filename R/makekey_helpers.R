@@ -1,0 +1,31 @@
+#' @title Helper functions that clean column names and check if the input matches the requirement of the `makekey` function
+#' @description
+#' Allow  the `makekey` function to ignore case and formatting differences in the column names of the input dataframe.
+#' @param data A data frame containing columns identifying well IDs, treatments, and strains. 
+#' Column names should preferably be `well_ID`, `treatment`, and `strain`.
+#' @param required_cols A character vector of expected column names.
+#' @return A character vector containing the matched column names.
+#' @keywords internal
+
+normalize_names <- function(x) {
+  tolower(gsub("[^[:alnum:]]", "", x))
+}
+
+match_cols <- function(data, required_cols) {
+  
+  actual_names <- names(data)
+  normalized_actual <- normalize_names(actual_names)
+  normalized_required <- normalize_names(required_cols)
+  
+  matches <- match(normalized_required, normalized_actual)
+  
+  if (anyNA(matches)) {
+    stop(
+      "Missing required columns: ",
+      paste(required_cols[is.na(matches)], collapse = ", ")
+    )
+  }
+  
+  actual_names[matches]
+}
+
