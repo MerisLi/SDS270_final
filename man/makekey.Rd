@@ -8,21 +8,21 @@ makekey(data)
 }
 \arguments{
 \item{data}{A data frame containing columns identifying well IDs, treatments, and strains.
-Column names should preferably be \code{well_ID}, \code{treatment}, and \code{strain}. However, the function is case-insensitive and does not require a specific column order of the input.}
+Column names should preferably be \code{well_ID}, \code{treatment}, and \code{strain}. However, the function is case-insensitive and does not require a specific column order in the input.}
 }
 \value{
 A dataframe with 5 columns and standardized column names:
 \itemize{
-\item well_ID: The original well identifier (e.g. A1).
-\item strains: The strain identifier (e.g. E2).
-\item treatment: Can be either a numeric volume or concentration, stored as a factor (e.g. 1 represents a treatment group that receives 1ug/mL ciprofloxacin per well).
-\item reps: The repetition number within each strain-treatment combination (e.g. getting 1, 2, or 3 for a triplicate)
-\item keys: A unique sample identifiers for each well, constructed from strain, treatment, and repetition number, stored as a factor
+\item \code{well_ID}: The original well identifier (e.g. A1).
+\item \code{strains}: The strain identifier (e.g. E2).
+\item \code{treatment}: Can be either a numeric volume or concentration, stored as a factor (e.g. 1 represents a treatment group that receives 1ug/mL ciprofloxacin per well).
+\item \code{reps}: The repetition number within each strain-treatment combination (e.g. getting 1, 2, or 3 for a triplicate)
+\item \code{keys}: A unique sample identifiers for each well, constructed from strain, treatment, and repetition number, stored as a factor
 (e.g. wt_1_1, wt_1_2, and wt_1_3 represent a triplicate of the wild-type (wt) strain receiving 1ug/mL ciprofloxacin treatment.
 }
 }
 \description{
-Given a well reference data sheet, the \code{makekey()} function can label the replication wells
+Given a 96-well reference data sheet, the \code{makekey()} function can label the replication wells
 and generate unique identifiers (\code{keys}) for each observation based on strain, treatment, and repetition number.
 }
 \examples{

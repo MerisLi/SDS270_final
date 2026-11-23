@@ -4,7 +4,7 @@
 #' and generate unique identifiers (`keys`) for each observation based on strain, treatment, and repetition number.
 #' @param data A data frame containing columns identifying well IDs, treatments, and strains. 
 #' Column names should preferably be `well_ID`, `treatment`, and `strain`. However, the function is case-insensitive and does not require a specific column order in the input.
-#' @importFrom dplyr filter group_by mutate arrange select ungroup
+#' @importFrom dplyr filter group_by mutate arrange select ungroup rename
 #' @returns A dataframe with 5 columns and standardized column names:
 #' * `well_ID`: The original well identifier (e.g. A1).
 #' * `strains`: The strain identifier (e.g. E2).

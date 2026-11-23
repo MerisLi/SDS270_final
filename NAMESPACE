@@ -6,6 +6,7 @@ importFrom(dplyr,
   filter,
   group_by,
   mutate,
+  rename,
   select,
   ungroup
 )
