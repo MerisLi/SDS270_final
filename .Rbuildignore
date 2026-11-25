@@ -1,3 +1,7 @@
 ^\.github$
 ^README\.Rmd$
 ^LICENSE\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^dataEditor\.Rproj$
+^data-raw$
