@@ -1,10 +1,12 @@
+#' @noRd
 #' @title Helper functions that clean column names and check if the input matches the requirement of the `makekey` function
 #' @description
 #' Allow  the `makekey` function to ignore case and formatting differences in the column names of the input dataframe.
-#' @param data A data frame containing columns identifying well IDs, treatments, and strains. 
+#' @param data A data frame containing columns identifying well IDs, treatments, and strain. 
 #' Column names should preferably be `well_ID`, `treatment`, and `strain`.
-#' @param required_cols A character vector of expected column names.
-#' @return A character vector containing the matched column names.
+#' @param `x` A character vector of column names in the data input.
+#' 
+#' @return A character vector containing only the matched column names.
 #' @keywords internal
 
 normalize_names <- function(x) {

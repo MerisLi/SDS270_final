@@ -2,12 +2,24 @@ Package: dataEditor
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+     c(
+        person("Meris", "Li",
+               email = "mli88@smith.edu",
+               role = c("aut", "cre")),
+        person("Sofia", "Muliawan",
+               email = "smuliawan@smith.edu",
+               role = "aut"),
+        person("Sagufta", "Anchal",
+               email = "sanchal@smith.edu",
+               role = "aut")
+    )
+Description: Tools for organizing, editing, and processing 96-well microplate experimental data.
 License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Imports: 
-    dplyr,
-    stringr
+    dplyr
+Depends: 
+    R (>= 3.5)
+LazyData: true

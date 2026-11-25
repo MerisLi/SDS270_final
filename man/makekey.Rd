@@ -7,14 +7,14 @@
 makekey(data)
 }
 \arguments{
-\item{data}{A data frame containing columns identifying well IDs, treatments, and strains.
+\item{data}{A data frame containing columns identifying well IDs, treatments, and strain.
 Column names should preferably be \code{well_ID}, \code{treatment}, and \code{strain}. However, the function is case-insensitive and does not require a specific column order in the input.}
 }
 \value{
 A dataframe with 5 columns and standardized column names:
 \itemize{
 \item \code{well_ID}: The original well identifier (e.g. A1).
-\item \code{strains}: The strain identifier (e.g. E2).
+\item \code{strain}: The strain identifier (e.g. E2).
 \item \code{treatment}: Can be either a numeric volume or concentration, stored as a factor (e.g. 1 represents a treatment group that receives 1ug/mL ciprofloxacin per well).
 \item \code{reps}: The repetition number within each strain-treatment combination (e.g. getting 1, 2, or 3 for a triplicate)
 \item \code{keys}: A unique sample identifiers for each well, constructed from strain, treatment, and repetition number, stored as a factor
@@ -26,6 +26,7 @@ Given a 96-well reference data sheet, the \code{makekey()} function can label th
 and generate unique identifiers (\code{keys}) for each observation based on strain, treatment, and repetition number.
 }
 \examples{
+data("well_reference")
 key <- makekey(well_reference)
 str(key)
 }
