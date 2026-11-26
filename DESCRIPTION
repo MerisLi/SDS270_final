@@ -19,7 +19,9 @@ Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Imports: 
-    dplyr
+    dplyr,
+    purrr,
+    stringr
 Depends: 
     R (>= 3.5)
 LazyData: true
