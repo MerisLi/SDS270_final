@@ -8,7 +8,7 @@
 #' #' \describe{
 #'   \item{first_1.5h}{The first kinetic cycle, duration = 1.5h}
 #'   \item{second_15h}{The second kinetic cycle, duration = 15h}
-#'   \item{OldTECAN_rawOutputList}{List of dataframes, c(first_1.5h, second_15h) by measurement sequence}
+#'   \item{NewTECAN_rawOutputList}{List of dataframes, c(first_1.5h, second_15h) by measurement sequence}
 #'   }
 #' @source Example data
 "OldTECAN_rawOutputList"
