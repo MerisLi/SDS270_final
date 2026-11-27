@@ -21,7 +21,12 @@ Roxygen: list(markdown = TRUE)
 Imports: 
     dplyr,
     purrr,
-    stringr
+    stringr,
+    stats,
+    ggplot2,
+    tidyr,
+    rlang
 Depends: 
     R (>= 3.5)
 LazyData: true
+RoxygenNote: 7.3.3
