@@ -8,9 +8,9 @@ second_15h <- readxl::read_xlsx(
   sheet = "second_15h"
 )
 
-NewTECAN_rawOutputList <- list(first_1.5h, second_15h)
+NewTECAN_rawOutput_List <- list(first_1.5h, second_15h)
   
 usethis::use_data(
-  NewTECAN_rawOutputList,
+  NewTECAN_rawOutput_List,
   overwrite = TRUE
 )
